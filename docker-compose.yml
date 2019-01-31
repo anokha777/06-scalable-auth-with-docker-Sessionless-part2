@@ -1,16 +1,32 @@
 version: '3'
 services:
-  node-app:
-    image: nodejs-app:0.0.1
+  app:
+    container_name: docker-node-mongo
+    restart: always
     build: .
     ports:
-      - 3000
-    environment:
-      - SERVICE_PORTS=3000
-    depends_on:
-      - mongo
+      - '3000:3000'
     links:
       - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - '27017:27017'
+
+
+# services:
+#   node-app:
+#     image: nodejs-app:0.0.1
+#     build: .
+#     ports:
+#       - 3000
+#     environment:
+#       - SERVICE_PORTS=3000
+#     depends_on:
+#       - mongo
+#     links:
+#       - mongo
 
   # node-appv2:
   #   image: nodejs-app:0.0.2
@@ -31,7 +47,7 @@ services:
   #   depends_on:
   #     - node-app
 
-  mongo:
-    image: mvertes/alpine-mongo:4.0.4-0
+  # mongo:
+  #   image: mvertes/alpine-mongo:4.0.4-0
 
     

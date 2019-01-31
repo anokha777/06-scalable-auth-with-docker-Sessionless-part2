@@ -1,5 +1,5 @@
 import {
-  userLogin, logoutUser, getRegistrationPage, userRegistration, getHomePage,
+  userLogin, logoutUser, getRegistrationPage, userRegistration, getHomePage, redirectHomePage,
 } from './user/user.js';
 import { getNotePage, createNote, updateNote } from './note/notes.js';
 import { getTrelloPage, createBoard, createCard, addMembers } from './trello/trello.js';
@@ -15,6 +15,10 @@ window.userloginui = function (username, passpord) {
 
 window.logoutUserui = function () {
   logoutUser();
+};
+
+window.redirectHomePageui = function () {
+  redirectHomePage();
 };
 
 window.getRegistrationPageui = function () {

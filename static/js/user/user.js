@@ -36,6 +36,22 @@ const userLogin = (username, passpord) => {
   });
 };
 
+// redirect home page
+const redirectHomePage = () => {
+  fetch(`${BACKEND_URL}user/home`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${document.cookie.split('=')[1]}`,
+    },
+  }).then((response1) => {
+    return response1.text();
+  }).then((res) => {
+    document.body.innerHTML = '';
+    document.write(res);
+  });
+};
+
 // logout user
 const logoutUser = () => {
   fetch(`${BACKEND_URL}user/logout`, {
@@ -113,5 +129,5 @@ const getHomePage = () => {
 };
 
 export {
-  userLogin, logoutUser, getRegistrationPage, userRegistration, getHomePage,
+  userLogin, logoutUser, getRegistrationPage, userRegistration, getHomePage, redirectHomePage,
 };
