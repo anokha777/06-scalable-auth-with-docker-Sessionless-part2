@@ -1,3 +1,6 @@
+# Running steps
+1. checkout code
+2. run - docker-compose up
 # Assignment - Week 5
 
 Submission date : 10th Dec
