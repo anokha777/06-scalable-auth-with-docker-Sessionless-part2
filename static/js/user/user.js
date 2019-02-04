@@ -95,7 +95,7 @@ const getRegistrationPage = () => {
 };
 
 const userRegistration = (username, password) => {
-  fetch('http://localhost:3000/user/register', {
+  fetch(`${BACKEND_URL}user/register`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
