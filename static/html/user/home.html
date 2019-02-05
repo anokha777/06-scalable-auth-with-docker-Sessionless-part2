@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anokha Home</title>
+</head>
+<body>
+    <header>
+        <div id="home">
+            <!-- <button type="button" onclick="gotohome()"><h2><strong>Application Home1</strong></h2></button> -->
+            <a href="javascript:redirectHomePageui()"><h2><strong>Anokha Home</strong></h2></a>
+        </div>
+        <div id="logout-btn">
+            <a href="javascript:logoutUserui()"><h2><strong>Signout</strong></h2></a>
+        </div>
+    </header>
+    <main>
+      <div id="app-selector-header"><h2>Please click one.</h2></div>
+      <div class="body-container">
+          <div>a. <a href="javascript:getNotePageui()">Note app</a></div>
+          <div>b. <a href="javascript:getTrelloPageui()">Trello app</a></div>
+          <div>c. <a href="javascript:getSlackChannelPageui()">Slack app</a></div>  
+        </div>
+    </main>
+    <footer>
+        <p>© 2019-20 Stackroute Application</p>
+    </footer>
+</body>
+</html>

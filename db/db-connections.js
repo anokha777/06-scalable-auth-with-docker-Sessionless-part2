@@ -6,7 +6,7 @@ mongoose.connect('mongodb://mongo:27017/04-mongo-flexbox-ajax-dom', { useNewUrlP
   if (err) {
     console.log('err', err);
   } else {
-    console.log('connected to db-');
+    console.log('connected to database db...');
   }
 }));
 
